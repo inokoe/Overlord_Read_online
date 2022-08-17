@@ -2,9 +2,9 @@ const config = {
   // main_domain: "overlord.img.cf.nanoc.work",
   // branch_domain: "overlord.img.cf.nanoc.work",
   // other_domain: "overlord.img.cf.nanoc.work",
-  main_domain: "overlord.img.vercel.nanoc.work",
-  branch_domain: "overlord.img.vercel.nanoc.work",
-  other_domain: "overlord.img.vercel.nanoc.work",
+  main_domain: "overlord.img.netlify.nanoc.work",
+  branch_domain: "overlord.img.netlify.nanoc.work",
+  other_domain: "overlord.img.netlify.nanoc.work",
   main: {
     dir: "main",
     index: [
