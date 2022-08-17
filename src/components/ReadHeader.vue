@@ -68,9 +68,10 @@ export default {
         cursor: pointer;
         filter: invert(100%);
 
-        &:hover {
-            animation: MenuShake 1s linear infinite;
-        }
+        // 移动端的hover bug：必须点击一下其他地方才可以结束
+        // &:hover {
+        //     animation: MenuShake 1s linear infinite;
+        // }
     }
 }
 
