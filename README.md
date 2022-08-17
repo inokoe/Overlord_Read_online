@@ -1,4 +1,5 @@
 # 声明
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3f0f614f-e550-4cfb-9663-ebcd9477fd9a/deploy-status)](https://app.netlify.com/sites/starlit-belekoy-9e390d/deploys)  
 `此项目旨在学习目的使用，由我本人所编写。`  
 第一版本于`2022年08月17日`完成，耗时`3天`  
 本项目所引用的素材资源均获取自`网络`，`本人不支持传播盗版`，仅供`学习测试`使用。
