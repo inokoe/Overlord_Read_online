@@ -711,12 +711,12 @@ const config = {
             cn: "圣王国的圣骑士(上)",
             tw: "聖王國的聖騎士(上)",
             start: 1,
-            end: 6,
+            end: 5,
           },
           {
             cn: "魔皇亚达巴沃",
             tw: "魔皇亞達巴沃",
-            start: 7,
+            start: 6,
             end: 85,
           },
           {
