@@ -46,6 +46,7 @@ export default {
 .container {
     text-align: center;
     color: #2c3e50;
+    user-select: none;
 }
 
 .tools {

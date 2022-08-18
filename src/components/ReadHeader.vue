@@ -39,6 +39,7 @@ export default {
 
 <style lang='less' scoped>
 .header_container {
+    user-select: none;
     position: fixed;
     top: 0;
     height: 50px;

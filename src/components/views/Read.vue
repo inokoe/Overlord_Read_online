@@ -54,5 +54,7 @@ export default {
 </script>
 
 <style lang='less' scoped>
-// .ReadPageConainter {}
+.ReadPageConainter {
+    user-select: none;
+}
 </style>

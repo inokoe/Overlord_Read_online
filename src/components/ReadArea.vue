@@ -124,6 +124,7 @@ ul {
 }
 
 .ReadArea {
+    user-select: none;
     width: 100%;
     display: flex;
     align-items: stretch;
