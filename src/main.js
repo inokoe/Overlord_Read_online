@@ -13,11 +13,11 @@ Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: errorimage,
   loading: loadimage,
-  observer: true,
-  observerOptions: {
-    rootMargin: "0px",
-    threshold: 0.1,
-  },
+  // observer: true,
+  // observerOptions: {
+  //   rootMargin: "0px",
+  //   threshold: 0.1,
+  // },
 });
 Vue.use(VueI18n);
 const messages = {
