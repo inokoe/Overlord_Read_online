@@ -12,19 +12,19 @@ const config = {
         id: "0",
         cn: "序章",
         tw: "序章",
-        end: 541,
+        end: 234,
         menu: [
           {
             cn: "Prologue 上",
             tw: "Prologue 上",
             start: 1,
-            end: 157,
+            end: 52,
           },
           {
             cn: "Prologue 下",
             tw: "Prologue 下",
             start: 158,
-            end: 541,
+            end: 234,
           },
         ],
       },
