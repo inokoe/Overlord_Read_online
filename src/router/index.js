@@ -47,7 +47,16 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  mode: "hash",
   routes,
+  // 记录浏览器的滚动进度
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 });
 
 export default router;
