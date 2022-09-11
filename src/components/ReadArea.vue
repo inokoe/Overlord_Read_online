@@ -11,7 +11,7 @@
                 <tr v-for="(item, index) in menu" :key="index">
                     <td :class="progress == parseInt(index) + 1 ? 'li_selected' : ''"
                         @click="progress = parseInt(index) + 1">{{ $i18n.locale === 'cn' ?
-                                item.cn : item.tw
+                        item.cn : item.tw
                         }}</td>
                     <td>{{ parseInt(item.end) - parseInt(item.start) + 1 }}</td>
                 </tr>
@@ -29,14 +29,15 @@
                     </li>
                 </ul>
                 <div class="buttonGroup">
-                    <button v-if="progress != 1" @click="progress--">{{ $i18n.locale === 'cn' ? menu[progress - 2].cn :
-                            menu[progress -
-                                2].tw
+                    <button v-if="progress != 1" @click="progress--">← {{ $i18n.locale === 'cn' ? menu[progress
+                    - 2].cn :
+                    menu[progress -
+                    2].tw
                     }}</button>
                     <button v-if="progress != menu.length" @click="progress++">{{ $i18n.locale === 'cn' ?
-                            menu[progress].cn :
-                            menu[progress].tw
-                    }}</button>
+                    menu[progress].cn :
+                    menu[progress].tw
+                    }} →</button>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ const messages = {
   cn: {
     message: {
       msg: "Overlord在线阅读站点",
-      desc: "提供从网络获得的Overlord小说阅读&下载",
+      desc: "提供从网络获得的Overlord小说阅读",
       main: "正文",
       branch: "外传",
       others: "其他",
@@ -35,7 +35,7 @@ const messages = {
   tw: {
     message: {
       msg: "Overlord在線閱讀站點",
-      desc: "提供從網絡獲得的Overlord小説閱讀&下載",
+      desc: "提供從網絡獲得的Overlord小説閱讀",
       main: "正文",
       branch: "外傳",
       others: "其他",
