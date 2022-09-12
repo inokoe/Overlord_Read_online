@@ -67,3 +67,14 @@ router.beforeEach((to, from, next) => {
     next();
   } else next({ path: "/home" });
 });
+
+
+router.afterEach(() => {
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?9dd2bff9d8635ee9aa7202e722c09c8a";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+})
