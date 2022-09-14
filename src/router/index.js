@@ -78,3 +78,8 @@ router.beforeEach((to, from, next) => {
 //     s.parentNode.insertBefore(hm, s);
 //   })();
 // })
+
+
+router.afterEach(() => {
+  document.documentElement.scrollTop = 0
+})
