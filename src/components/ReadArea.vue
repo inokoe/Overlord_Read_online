@@ -31,7 +31,7 @@
                 <div class="buttonGroup">
                     <button class="PreNextBook" v-if="nowBookIndex != 0"
                         @click="$router.push(bookIndex[nowBookIndex-1])">[Pre]
-                        {{nowBookIndex-1}} {{
+                        {{bookIndex[nowBookIndex-1].query.id}} {{
                         $i18n.locale
                         === 'cn' ? bookName[nowBookIndex
                         - 1].cn :
@@ -48,7 +48,8 @@
                     menu[progress].tw
                     }} →</button>
                     <button class="PreNextBook" v-if="nowBookIndex+1 != bookIndex.length"
-                        @click="$router.push(bookIndex[nowBookIndex+1])">[Next] {{nowBookIndex+1}} {{
+                        @click="$router.push(bookIndex[nowBookIndex+1])">[Next] {{bookIndex[nowBookIndex+1].query.id}}
+                        {{
                         $i18n.locale
                         === 'cn' ? bookName[nowBookIndex+1].cn :
                         bookName[nowBookIndex+1].tw
