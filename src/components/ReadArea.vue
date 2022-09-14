@@ -29,6 +29,15 @@
                     </li>
                 </ul>
                 <div class="buttonGroup">
+                    <button class="PreNextBook" v-if="nowBookIndex != 0"
+                        @click="$router.push(bookIndex[nowBookIndex-1])">[Pre]
+                        {{nowBookIndex-1}} {{
+                        $i18n.locale
+                        === 'cn' ? bookName[nowBookIndex
+                        - 1].cn :
+                        bookName[nowBookIndex -
+                        1].tw
+                        }}</button>
                     <button v-if="progress != 1" @click="progress--">← {{ $i18n.locale === 'cn' ? menu[progress
                     - 2].cn :
                     menu[progress -
@@ -38,6 +47,12 @@
                     menu[progress].cn :
                     menu[progress].tw
                     }} →</button>
+                    <button class="PreNextBook" v-if="nowBookIndex+1 != bookIndex.length"
+                        @click="$router.push(bookIndex[nowBookIndex+1])">[Next] {{nowBookIndex+1}} {{
+                        $i18n.locale
+                        === 'cn' ? bookName[nowBookIndex+1].cn :
+                        bookName[nowBookIndex+1].tw
+                        }}</button>
                 </div>
             </div>
         </div>
@@ -51,6 +66,9 @@ export default {
     data() {
         return {
             id: '1',
+            nowBookIndex: 1,
+            bookIndex: [],
+            bookName: [],
             // 进度
             progress: 1,
             // 线路
@@ -84,13 +102,31 @@ export default {
             if (element.id + '' == this.id) {
                 this.end = element.end
                 this.menu = element.menu
+                return
             }
         });
+        this.getBookIndex()
     }, mounted() {
         this.$bus.$on('showReadMenu', (data) => {
             this.readMenuStatus = data
         })
     }, methods: {
+        getBookIndex() {
+            let arr = ['main', 'branch', 'others']
+            arr.forEach(ele => {
+                let config = this.$config[ele]
+                config = config.index
+                config.forEach(element => {
+                    let data = { query: { id: element.id + '', line: ele } }
+                    let name = { tw: element.tw, cn: element.cn }
+                    this.bookName.push(name)
+                    this.bookIndex.push(data)
+                    if (element.id == this.id) {
+                        this.nowBookIndex = this.bookIndex.length - 1
+                    }
+                })
+            })
+        },
     }, watch: {
         progress: function (oldValue, newValue) {
             if (oldValue === newValue) return
@@ -122,6 +158,10 @@ ul {
     list-style: none;
     appearance: none;
     padding-inline-start: 0px;
+}
+
+.PreNextBook {
+    color: orangered;
 }
 
 .ReadArea {

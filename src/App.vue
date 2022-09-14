@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class="this.$store.state.darkModel === 'true' ? 'appDarkModel' : ''">
-    <router-view />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 
