@@ -14,6 +14,7 @@ Vue.use(VueLazyload, {
   error: errorimage,
   loading: loadimage,
   observer: true,
+  throttleWait: 500,
   observerOptions: {
     rootMargin: "0px",
     threshold: 0.1,
