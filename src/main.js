@@ -10,11 +10,11 @@ Vue.prototype.$config = config.customData();
 const loadimage = require("./assets/loading.svg");
 const errorimage = require("./assets/loadingError.svg");
 Vue.use(VueLazyload, {
-  preLoad: 1.3,
+  preLoad: 1.18,
   error: errorimage,
   loading: loadimage,
   observer: true,
-  throttleWait: 50,
+  throttleWait: 0,
   observerOptions: {
     rootMargin: "0px",
     threshold: 0.1,
