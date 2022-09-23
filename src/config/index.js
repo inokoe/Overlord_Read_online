@@ -5,9 +5,9 @@ const config = {
   // main_domain: "overlord.cdn.bunny.nanoc.work",
   // branch_domain: "overlord.cdn.bunny.nanoc.work",
   // other_domain: "overlord.cdn.bunny.nanoc.work",
-  main_domain: "overlord.vercel.nanoc.work/api/",
-  branch_domain: "overlord.vercel.nanoc.work/api/",
-  other_domain: "overlord.vercel.nanoc.work/api/",
+  main_domain: "overlord.vercel.nanoc.work/api",
+  branch_domain: "overlord.vercel.nanoc.work/api",
+  other_domain: "overlord.vercel.nanoc.work/api",
   main: {
     dir: "main",
     index: [
