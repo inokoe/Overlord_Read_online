@@ -10,7 +10,7 @@ Vue.prototype.$config = config.customData();
 const loadimage = require("./assets/loading.svg");
 const errorimage = require("./assets/loadingError.svg");
 Vue.use(VueLazyload, {
-  preLoad: 1.18,
+  preLoad: 1.20,
   error: errorimage,
   loading: loadimage,
   observer: true,
